@@ -4,7 +4,6 @@ from keras.layers import Dense, Dropout, Lambda, Flatten, Activation, Conv2D
 from keras.layers.convolutional import MaxPooling2D, AveragePooling2D
 from keras.layers.normalization import BatchNormalization
 from keras.models import Model
-from inception_resnet_v1 import reduction_resnet_A
 from keras.utils import plot_model
 import keras.backend as K
 
@@ -201,4 +200,5 @@ def inception_resnet_v2(nb_classes=1001, scale=True):
 
 if __name__ == "__main__":
     inception_resnet_v2_model = inception_resnet_v2()
-    plot_model(inception_resnet_v2_model, to_file='inception_resnet_v2.png', show_shapes=True)
+    inception_resnet_v2_model.summary()
+    # plot_model(inception_resnet_v2_model, to_file='inception_resnet_v2.png', show_shapes=True)
